@@ -14,15 +14,13 @@ const healthProgressRouter = require('./routes/healthProgress');
 const activitiesRouter = require('./routes/activities');
 const mealRouter = require("./routes/meal");
 const userRouter = require("./routes/user");
-const messageRouter = require("./routes/message");
-const authRoute = require("./routes/auth");
 
 const User = require("./models/User");
 const bcrypt = require("bcryptjs");
 
 // Enable CORS with updated configuration
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://lifeec.onrender.com'],
+    origin: ['http://localhost:5173', 'https://our-lifeec.onrender.com'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
@@ -40,8 +38,6 @@ app.use("/api/v1/health-progress", healthProgressRouter);
 app.use("/api/v1/activities", activitiesRouter);
 app.use("/api/v1/meal", mealRouter);
 app.use("/api/v1/user", userRouter);
-app.use("/api/v1/messages", messageRouter);
-app.use("/api/v1/auth", authRoute);
 
 // Serve static files in production
 if (process.env.NODE_ENV === 'production') {
