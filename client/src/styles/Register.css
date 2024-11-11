@@ -1,0 +1,225 @@
+.register-main {
+  display: flex;
+  height: 100vh;
+  background: url('../assets/healthcare.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.register-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 31, 63, 0.4), rgba(0, 64, 128, 0.4));
+}
+
+.register-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.register-right-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.register-logo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.register-logo img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.register-logo img:hover {
+  transform: scale(1.05);
+}
+
+.register-center {
+  text-align: center;
+}
+
+.register-center h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.register-center p {
+  color: #e5e7eb;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"] {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  margin-bottom: 1rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+form input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.pass-input-div {
+  position: relative;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.pass-input-div input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  padding-right: 2.75rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.pass-input-div svg {
+  position: absolute;
+  right: 0.75rem;
+  top: 40%;
+  height: 20px;
+  width: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 2;
+}
+
+.pass-input-div svg:hover {
+  color: #ffffff;
+}
+
+.register-center-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-top: 1.5rem;
+}
+
+.register-center-buttons button {
+  width: 100%;
+  padding: 0.875rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.register-center-buttons button:first-child {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.register-center-buttons button:first-child:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-center-buttons button:last-child {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.register-center-buttons button:last-child:hover {
+  background: #ffffff;
+}
+
+.register-center-buttons button:last-child img {
+  width: 24px;
+  height: 24px;
+}
+
+.register-bottom-p {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #ffffff;
+}
+
+.register-bottom-p a {
+  color: #ffffff;
+  opacity: 0.8;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.register-bottom-p a:hover {
+  color: #ffffff;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .register-main {
+    padding: 1rem;
+  }
+
+  .register-right-container {
+    padding: 1.5rem;
+  }
+}
